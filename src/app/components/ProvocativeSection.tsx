@@ -55,7 +55,7 @@ const ProvocativeSection = () => {
 
 
   return (
-    <section ref={containerRef} className="py bg-bgPrimary relative overflow-hidden">
+    <section ref={containerRef} className=" bg-bgPrimary relative overflow-hidden">
       <div className='bg-lines  h-full w-full absolute '>
       </div>
       <div className="container mx-auto px-4 relative z-10">

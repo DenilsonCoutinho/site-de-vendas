@@ -9,6 +9,7 @@ import AggressiveCopy from "./components/aggressiveCopy";
 import WhatsappTestimonials from "./components/whatsappTestimonials";
 import ContactForm from "./components/contactForm";
 import FAQ from "./components/faq";
+import Examples from "./components/examples";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         subtitle="Veja alguns dos sites incríveis que já criamos para nossos clientes"
       />
       <ProvocativeSection />
+      <Examples/>
       <TestimonialsSection/>
       {/* <WhatsappTestimonials /> */}
       {/* <ContactForm /> */}

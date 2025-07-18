@@ -12,15 +12,11 @@ import tela from '@/assets/build-notebook/sleepStore/tela-laptop-demonstration.p
 import tela_allan from '@/assets/build-notebook/allanBelli/tela-laptop-allan.png'
 import politeia from '@/assets/build-notebook/politeia/tela-laptop-politeia.png'
 
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode, Pagination, Navigation, Autoplay } from 'swiper/modules';
+
 import Image from 'next/image';
 import GlowEffect from './glowEffect/glowEffec';
 import { useTriggerResize } from '../../../context/triggerResize';
+import { Button } from '@/components/ui/button';
 
 interface PortfolioCarouselProps {
   title: string;
@@ -31,21 +27,16 @@ const PortfolioCarousel: React.FC<PortfolioCarouselProps> = ({ title, subtitle }
   const containerRef = useRef(null);
   const screenRef = useRef<HTMLImageElement>(null);
   const glowEffectRef = useRef<HTMLImageElement>(null);
-  const { inneWidth } = useTriggerResize()
-  const [correctWidth, setCorrectWidth] = useState<number>(0)
-  const progressCircle = useRef<SVGSVGElement | null>(null);
-  const progressContent = useRef<HTMLSpanElement | null>(null);
+ 
 
-  useEffect(() => {
-    setCorrectWidth(window.innerWidth)
-  }, [inneWidth])
+ 
   useGSAP(() => {
-  gsap.fromTo(
+    gsap.fromTo(
       ".animatedText",
-      { opacity: 0,y:80 },
+      { opacity: 0, y: 80 },
       {
         opacity: 1,
-        y:0,
+        y: 0,
         scrollTrigger: {
           trigger: containerRef.current,
           start: "-=400",
@@ -91,10 +82,21 @@ const PortfolioCarousel: React.FC<PortfolioCarouselProps> = ({ title, subtitle }
     );
   }, []);
 
-
+const handleScrollToExamples= () => {
+        const contactSection = document.getElementById('examples');
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
   return (
-    <section ref={containerRef} className="py-20  bg-bgPrimary overflow-hidden relative">
-      <div className='bg-lines  h-full w-full absolute '>
+    <section ref={containerRef} className="md:py-20 py-10  bg-bgPrimary overflow-hidden relative">
+      <div className='bg-lines  '>
+        <div className="lines">
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
+        </div>
       </div>
       <div className="container mx-auto px-4 z-20 relative">
         <div className="text-center mb-12">
@@ -102,7 +104,7 @@ const PortfolioCarousel: React.FC<PortfolioCarouselProps> = ({ title, subtitle }
             {title}
           </h2>
           {subtitle && (
-            <p className="text-xl text-white max-w-3xl mx-auto animatedText">
+            <p className="md:text-xl text-white max-w-3xl mx-auto animatedText">
               {subtitle}
             </p>
           )}
@@ -127,104 +129,13 @@ const PortfolioCarousel: React.FC<PortfolioCarouselProps> = ({ title, subtitle }
             className=" relative z-0"
           />
         </div>
-
-        <div className="relative select-none md:scale-100 scale-125">
-          <Swiper
-            slidesPerView={correctWidth > 700 ? 2 : 1}
-            spaceBetween={30}
-            freeMode={true}
-            loop={true}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
-            onAutoplayTimeLeft={(swiper, time, progress) => {
-              if (progressCircle.current) {
-                progressCircle.current.style.setProperty('--progress', String(1 - progress));
-              }
-
-              if (progressContent.current) {
-                progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
-              }
-            }}
-            navigation={true}
-            pagination={{
-              clickable: true,
-            }}
-            modules={[FreeMode, Pagination, Navigation, Autoplay]}
-            className="mySwiper md:h-80 h- mt-32"
-          >
-            <SwiperSlide className=' w-80'><div className="flex flex-col items-center justify-center relative perspective-[1200px] ">
-              <Image
-                quality={100}
-                src={tela_gisele}
-                alt="tela_gisele"
-                width={600}
-                className="  z-10"
-              />
-              <Image
-                quality={100}
-                src={teclado}
-                alt="Teclado do notebook"
-                width={600}
-                className=" relative z-0"
-              />
-            </div>
-            </SwiperSlide>
-            <SwiperSlide className=' h-80 w-80'><div className="flex flex-col items-center justify-center relative perspective-[1200px] ">
-              <Image
-                quality={100}
-                src={tela_allan}
-                alt="tela_allan"
-                width={600}
-                className="  z-10"
-              />
-              <Image
-                quality={100}
-                src={teclado}
-                alt="Teclado do notebook"
-                width={600}
-                className=" relative z-0"
-              />
-            </div>
-            </SwiperSlide>
-            <SwiperSlide className=' h-80 w-80'><div className="flex flex-col items-center justify-center relative perspective-[1200px] ">
-              <Image
-                quality={100}
-                src={politeia}
-                alt="Tela do notebook"
-                width={600}
-                className="  z-10"
-              />
-              <Image
-                quality={100}
-                src={teclado}
-                alt="Teclado do notebook"
-                width={600}
-                className=" relative z-0"
-              />
-            </div>
-            </SwiperSlide>
-            <SwiperSlide className=' h-80 w-80'><div className="flex flex-col items-center justify-center relative perspective-[1200px] ">
-              <Image
-                quality={100}
-                src={tela}
-                alt="Tela do notebook"
-                width={600}
-                className="  z-10"
-              />
-              <Image
-                quality={100}
-
-                src={teclado}
-                alt="Teclado do notebook"
-                width={600}
-                className=" relative z-0"
-              />
-            </div>
-            </SwiperSlide>
-          </Swiper>
+        <div className='flex justify-center items-center'>
+        <Button onClick={()=>handleScrollToExamples()} className='cursor-pointer p-7 mt-12 max-w-[500px] w-full mx-auto bg-surface hover:bg-surface hover:brightness-150 shadow-lg shadow-bgPrimary buttonShadow'>
+          VER PORTFÓLIO
+          </Button>
         </div>
+
+        
       </div>
     </section>
   );
