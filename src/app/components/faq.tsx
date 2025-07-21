@@ -1,38 +1,38 @@
 import React from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { HelpCircle, Clock, CreditCard, Shield, Users, Zap } from 'lucide-react';
+import { HelpCircle, Clock, CreditCard, Shield, Users, Zap, Phone } from 'lucide-react';
 
 const FAQSection = () => {
   const faqData = [
     {
-      id: 'cnpj',
+      id: 'result',
       icon: <Users className="w-5 h-5" />,
-      question: 'Preciso ter CNPJ para fazer um site?',
-      answer: 'Não necessariamente! Criamos sites tanto para empresas com CNPJ quanto para profissionais autônomos, MEI ou pessoas físicas. O importante é ter um negócio para promover online.'
+      question: 'Não sei se um site vai realmente trazer resultados para o meu negócio.',
+      answer: ' Um site profissional aumenta sua visibilidade online, atrai mais clientes e fortalece sua marca. Nossos projetos são otimizados para SEO e conversão, garantindo resultados mensuráveis.'
     },
     {
-      id: 'tempo',
+      id: 'afraid',
       icon: <Clock className="w-5 h-5" />,
-      question: 'Quanto tempo leva para ficar pronto?',
-      answer: 'Sites simples ficam prontos em 3-5 dias úteis, sites mais complexos em 7-10 dias. Sempre cumprimos os prazos acordados. A velocidade é uma das nossas especialidades!'
+      question: 'Tenho medo de investir e não ter retorno.',
+      answer: 'Entendemos! Por isso, oferecemos estratégias comprovadas e acompanhamento pós-lançamento para maximizar seu ROI. Seu site será uma ferramenta de vendas, não apenas uma vitrine.'
     },
     {
-      id: 'satisfacao',
+      id: 'expensive',
       icon: <Shield className="w-5 h-5" />,
-      question: 'E se eu não gostar do resultado?',
+      question: 'Acho que criar um site é muito caro.',
       answer: 'Oferecemos até 3 rodadas de revisão gratuitas para garantir que fique exatamente como você imaginou. Se ainda assim não ficar satisfeito, devolvemos 100% do valor investido.'
     },
     {
-      id: 'pagamento',
+      id: 'manutencao',
       icon: <CreditCard className="w-5 h-5" />,
-      question: 'Posso pagar parcelado?',
-      answer: 'Sim! Aceitamos parcelamento no cartão de crédito em até 12x sem juros, PIX com desconto de 10%, ou 50% no início e 50% na entrega. Temos opções para todos os bolsos.'
+      question: 'Não entendo nada de tecnologia, será que vou conseguir gerenciar o site?',
+      answer: 'Nossos sites são intuitivos e fáceis de atualizar, mesmo sem conhecimento técnico. Além disso, oferecemos suporte contínuo para te ajudar em cada etapa.'
     },
     {
-      id: 'manutencao',
+      id: 'problem',
       icon: <Zap className="w-5 h-5" />,
-      question: 'Preciso pagar mensalidade?',
-      answer: 'Não! Você paga apenas uma vez e o site é seu para sempre. Oferecemos hospedagem gratuita no primeiro ano. Após isso, você pode manter conosco ou migrar para onde quiser.'
+      question: 'E se o site não funcionar ou tiver problemas?',
+      answer: 'Garantimos um site estável, rápido e seguro, com manutenção inclusa e suporte técnico imediato para resolver qualquer questão rapidamente.'
     },
     {
       id: 'alteracoes',
@@ -41,29 +41,42 @@ const FAQSection = () => {
       answer: 'Claro! Entregamos um painel administrativo simples onde você pode alterar textos, fotos e informações básicas. Para mudanças maiores, oferecemos suporte técnico com preços justos.'
     },
     {
-      id: 'dominio',
+      id: 'sociais',
       icon: <Users className="w-5 h-5" />,
-      question: 'O domínio (.com.br) está incluso?',
-      answer: 'Sim! O registro do domínio por 1 ano está incluso no pacote, assim como a hospedagem. Você não precisa se preocupar com nada técnico, deixa tudo com a gente.'
+      question: 'Já tenho redes sociais, por que preciso de um site?',
+      answer: 'Redes sociais são ótimas, mas um site é sua casa própria na internet. Ele dá mais controle, profissionalismo e é essencial para clientes que buscam sua empresa no Google.'
     },
     {
-      id: 'mobile',
+      id: 'mktplace',
       icon: <Zap className="w-5 h-5" />,
-      question: 'O site vai funcionar no celular?',
-      answer: 'Absolutamente! Todos os nossos sites são 100% responsivos, ou seja, se adaptam perfeitamente a qualquer dispositivo: celular, tablet, computador. Mais de 70% dos acessos vêm do mobile hoje.'
+      question: 'Já vendo bem nos marketplaces, por que preciso de um site próprio?',
+      answer: 'Um site próprio te dá liberdade para personalizar sua marca, reduzir taxas de marketplaces e fidelizar clientes. Além disso, você aparece no Google, atraindo compradores que não estão nos marketplaces.'
     }
+    ,
+    {
+      id: 'mktplaceAfraid',
+      icon: <Zap className="w-5 h-5" />,
+      question: 'Tenho medo de que um site próprio seja difícil de gerenciar junto com o marketplace.',
+      answer: ' e fidelizar clientes. Além disso, você aparece no Google, atraindo compradores que não estão nos marketplaces.'
+    },
+     {
+      id: 'mktplaceStrategy',
+      icon: <Zap className="w-5 h-5" />,
+      question: 'E se o site não atrair clientes e eu perder o investimento?',
+      answer: 'Desenvolvemos seu site com estratégias de SEO e design focado em conversão, direcionando tráfego orgânico e transformando visitantes em compradores, para que seu investimento gere retorno além do marketplace'
+    },
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-bgPrimary">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Perguntas Frequentes
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               Tire suas dúvidas antes de solicitar seu orçamento
             </p>
           </div>
@@ -74,19 +87,19 @@ const FAQSection = () => {
               <AccordionItem
                 key={faq.id}
                 value={faq.id}
-                className="bg-gray-50 rounded-xl border-0 px-6 py-2 hover:bg-gray-100 transition-colors duration-200"
+                className="bg-bgPrimary rounded-xl border-0 px-2 py-2 hover:bg-textPrimary transition-colors duration-200"
               >
                 <AccordionTrigger className="text-left hover:no-underline py-6">
                   <div className="flex items-center space-x-4">
-                    <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white flex-shrink-0">
+                    {/* <div className="w-10 h-10 bg-textPrimary rounded-full flex items-center justify-center text-white flex-shrink-0">
                       {faq.icon}
-                    </div>
-                    <span className="text-lg font-semibold text-gray-900 text-left">
+                    </div> */}
+                    <span className="md:text-lg text-md font-semibold text-white text-left">
                       {faq.question}
                     </span>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-700 text-base leading-relaxed pb-6 pl-14">
+                <AccordionContent className="text-white text-xs leading-relaxed pb-6 ">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -94,7 +107,7 @@ const FAQSection = () => {
           </Accordion>
 
           {/* Still have questions? */}
-          <div className="mt-12 text-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8">
+          <div className="mt-12 text-center bg-gradient-to-r from-bgPrimary to-textPrimary rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ainda tem alguma dúvida?
             </h3>
@@ -108,11 +121,11 @@ const FAQSection = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-semibold transition-colors duration-200"
               >
-                <span className="mr-2">💬</span>
+                <span className="mr-2"><Phone /></span>
                 Chamar no WhatsApp
               </a>
               <div className="text-white/80 text-sm">
-                Resposta garantida em até 2 horas
+                Resposta garantida em até 10 minutos
               </div>
             </div>
           </div>

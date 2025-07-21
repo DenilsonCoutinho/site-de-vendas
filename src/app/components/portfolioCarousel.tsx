@@ -7,15 +7,9 @@ gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
 import teclado from '@/assets/teclado-laptop-demonstration.png'
-import tela_gisele from '@/assets/build-notebook/giseleTerapeu/tela-laptop-gisele.png'
 import tela from '@/assets/build-notebook/sleepStore/tela-laptop-demonstration.png'
-import tela_allan from '@/assets/build-notebook/allanBelli/tela-laptop-allan.png'
-import politeia from '@/assets/build-notebook/politeia/tela-laptop-politeia.png'
-
-
 import Image from 'next/image';
 import GlowEffect from './glowEffect/glowEffec';
-import { useTriggerResize } from '../../../context/triggerResize';
 import { Button } from '@/components/ui/button';
 
 interface PortfolioCarouselProps {

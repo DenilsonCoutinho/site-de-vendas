@@ -7,6 +7,8 @@ import allan_gestor from '@/assets/examples/allan-gestor 1.png'
 import politeia from '@/assets/examples/politei.png'
 import gisele from '@/assets/examples/gi.png'
 import caio from '@/assets/examples/caio 1.png'
+import samuel from '@/assets/examples/Página de venda 1.png'
+import estetica from '@/assets/examples/estetica.png'
 
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -79,7 +81,7 @@ export default function Examples() {
                     />
                 </div>
 
-                <div className="image-animated overflow-hidden rounded-xl shadow-md row-span-1">
+                <div className="image-animated  rounded-xl shadow-md row-span-1">
                     <Image
                         src={caio}
                         alt="portfolio-caio"
@@ -111,7 +113,26 @@ export default function Examples() {
                         className=" w-full h-auto object-cover rounded-xl hover:scale-105 transition-transform duration-300"
                     />
                 </div>
-
+                <div className="image-animated overflow-hidden rounded-xl shadow-md row-span-1">
+                    <Image
+                        src={samuel}
+                        alt="portfolio-gisele"
+                        quality={100}
+                        placeholder="blur"
+                        loading="lazy"
+                        className=" w-full h-auto object-cover rounded-xl hover:scale-105 transition-transform duration-300"
+                    />
+                </div>
+                <div className="image-animated overflow-hidden rounded-xl shadow-md row-span-1">
+                    <Image
+                        src={estetica}
+                        alt="portfolio-gisele"
+                        quality={100}
+                        placeholder="blur"
+                        loading="lazy"
+                        className=" w-full h-auto object-cover rounded-xl hover:scale-105 transition-transform duration-300"
+                    />
+                </div>
             </div>
         </div>
     )
