@@ -10,12 +10,12 @@ import gsap from 'gsap'; // <-- import GSAP
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 const ProvocativeSection = () => {
-  const handleScrollToContact = () => {
-    const contactSection = document.getElementById('contato');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  function toWhatssap() {
+    window.open(
+      'https://wa.me/5519989332087?text=olá, gostaria de falar com um progamador',
+      '_blank'
+    );
+  }
   const containerRef = useRef(null);
 
   useGSAP(() => {
@@ -126,7 +126,7 @@ const ProvocativeSection = () => {
             <p className="text-red-100 text-xl mb-6 font-medium">
               Pare de perder clientes para quem se levou a sério
             </p>
-            <Button className='p-7 tilt-in-top-1 bg-surface hover:bg-surface hover:brightness-150 shadow-lg shadow-bgPrimary buttonShadow'>QUERO UM ORÇAMENTO AGORA</Button>
+            <Button onClick={() => toWhatssap()} className='p-7 tilt-in-top-1 bg-surface hover:bg-surface hover:brightness-150 shadow-lg shadow-bgPrimary buttonShadow'>QUERO UM ORÇAMENTO AGORA</Button>
           </div>
         </div>
       </div>

@@ -6,7 +6,13 @@ import pessoas from '../../assets/hero/pessoas.webp'
 import gsap from 'gsap';
 import Image from 'next/image';
 const Hero = () => {
-    
+
+    function toWhatssap() {
+        window.open(
+            'https://wa.me/5519989332087?text=olá, gostaria de falar com um progamador',
+            '_blank'
+        );
+    }
 
     return (
         <section className="relative md:min-h-dvh min-h-dvh bg-hero overflow-hidden">
@@ -18,7 +24,7 @@ const Hero = () => {
                         serviços e empresas
                     </h1>
 
-                    <Button className='p-7 fade-in bg-surface hover:bg-surface hover:brightness-150 shadow-lg shadow-bgPrimary buttonShadow'>QUERO UM ORÇAMENTO AGORA</Button>
+                    <Button onClick={() => toWhatssap()} className='p-7 cursor-pointer fade-in bg-surface hover:bg-surface hover:brightness-150 shadow-lg shadow-bgPrimary buttonShadow'>QUERO UM ORÇAMENTO AGORA</Button>
                     <div className='flex md:flex-row fade-in flex-col md:justify-start justify-center gap-4 items-center '>
                         <Image src={pessoas} alt='mockup' width={160} quality={100} className='' />
                         <p className='text-white text-sm  font-bold'>

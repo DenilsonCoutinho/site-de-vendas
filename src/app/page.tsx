@@ -11,7 +11,7 @@ import PortfolioCarousel from "./components/portfolioCarousel";
 import FAQ from "./components/faq";
 import Examples from "./components/examples";
 import WhoIam from "./components/whoIam";
-import { MyChatBot } from "./components/chatBot/myChat";
+import {MyChatBot}  from "./components/chatBot/myChat";
 
 export default function Home() {
   return (
