@@ -1,36 +1,17 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1>Site para prospecção de clientes em busca de sites e serviços</h1>
 
-## Getting Started
+## 🛠 Tecnologias utilizadas
 
-First, run the development server:
+- **Next.js** + **React 19** – Estrutura moderna de front-end
+- **Tailwind CSS** – Utilitários para estilização rápida e responsiva
+- **Lucide React** – Ícones elegantes baseados em SVG
+- **GSAP** – Animações suaves e performáticas
+- **Swiper** – Carrossel responsivo para seções e slides
+- **Radix UI (via shadcn/ui)** – Componentes interativos e acessíveis
+- **Chatbot (via React Chatbotify)** – Integração de assistente conversacional
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<h1>Eu mesmo fiz desde o design até o desenvolvimento</h1>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+https://github.com/user-attachments/assets/79c90836-ea60-4176-bb7d-997da618c882
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
