@@ -29,7 +29,7 @@ const flow: Flow = {
 
         case 'falar com um progamador':
           window.open(
-            'https://wa.me/5519989332087?text=olá, gostaria de falar com um progamador',
+            'https://wa.me/5548991109700?text=olá, gostaria de falar com um progamador',
             '_blank'
           );
           reply = 'Vamos te encaminhar para um progamador!';

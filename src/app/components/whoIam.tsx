@@ -6,15 +6,7 @@ import GlowEffect from "./glowEffect/glowEffec";
 import GlowNoEffect from "./glowEffect/glowNoEffect";
 
 const WhoIam = () => {
-    const pessoas = [
-        {
-            nome: "Wesley Vieira",
-            cargo: "Creative Director",
-            texto: "Com mais de 8 anos de experiência no mercado criativo, Wesley lidera projetos que transformam marcas e conectam pessoas. Especialista em estratégia de marca, ela combina visão criativa com execução estratégica.",
-            imagem: person1,
-            background: "linear-gradient(135deg, #C80101 0%, #070707 100%)",
-        },
-        {
+    const pessoas = [{
             nome: "Denilson Coutinho",
             cargo: "Densenvolvedor e WebDesigner",
             texto: "Jovem visionário com 4 anos dedicados à inovação digital, Denilson é responsável por traduzir insights em experiências memoráveis. Especializado em UX/UI Design e Progamação.",
@@ -22,6 +14,14 @@ const WhoIam = () => {
             background: "linear-gradient(135deg, #070707 0%, #C80101 100%)",
         },
 
+        {
+            nome: "Wesley Vieira",
+            cargo: "Creative Director",
+            texto: "Com mais de 8 anos de experiência no mercado criativo, Wesley lidera projetos que transformam marcas e conectam pessoas. Especialista em estratégia de marca, ela combina visão criativa com execução estratégica.",
+            imagem: person1,
+            background: "linear-gradient(135deg, #C80101 0%, #070707 100%)",
+        },
+        
     ];
 
     return (
